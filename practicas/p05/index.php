@@ -75,6 +75,32 @@
     $c = (double) $a;
     echo "La cadena 9E3 se convierte a un número en punto flotante (double). En este caso, la conversión produce el valor numérico 9000.0<br>";
 
+    echo "<br>";
+    $a = "0";
+    $b = "TRUE";
+    $c = FALSE;
+    $d = ($a OR $b);
+    $e = ($a AND $c);
+    $f = ($a XOR $b);
+
+    // Mostrar los valores con var_dump
+    var_dump($a); // string(1) "0"
+    echo "<br>";
+    var_dump($b); // string(4) "TRUE"
+    echo "<br>";
+    var_dump($c); // bool(false)
+    echo "<br>";
+    var_dump($d); // bool(true)
+    echo "<br>";
+    var_dump($e); // bool(false)
+    echo "<br>";
+    var_dump($f); // bool(true)
+    echo "<br>";
+
+    // Función para convertir booleano a cadena
+    echo "Booleano de \$c: " . ($c ? 'true' : 'false') . "<br>";  // false
+    echo "Booleano de \$e: " . ($e ? 'true' : 'false') . "<br>";  // false
+
 
 ?>
 </body>
