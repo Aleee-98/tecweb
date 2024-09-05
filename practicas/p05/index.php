@@ -22,12 +22,12 @@
 
     $a = "PHP server";
     $b = &$a;
-    echo '<br>';
+    echo "<br>";
     echo "a = $a<br>";
     echo "b = $b<br>";
     echo "c = $c<br>";
 
-    echo '<br>';
+    echo "<br>";
     echo "Después del segundo bloque de asignaciones, todas las variables ($a, $b, y $c) tendrán el valor PHP server, porque $b y $c están referenciadas a $a."
 ?>
 </body>
