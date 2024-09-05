@@ -53,14 +53,9 @@
     $z[0] = "MySQL";
     echo "\$z[0] = $z[0]<br>";  // MySQL    
     
-
+    
     echo "<br>";
     function test() {
-        $a = "PHP5";
-        $z[] = &$a;
-        $b = "5a version de PHP";
-        $a .= $b;
-        $z[0] = "MySQL";
         echo "Valores usando \$GLOBALS:<br>";
         echo "a = " . $GLOBALS['a'] . "<br>";
         echo "b = " . $GLOBALS['b'] . "<br>";
@@ -69,8 +64,17 @@
         print_r($GLOBALS['z']);
         echo "<br><br>";
     }
-
     test();
+
+    $a = "7 personas";
+    echo "Se asigna la cadena '7 personas' a la variable \$a.<br>";
+    $b = (integer) $a;
+    echo "La cadena se convierte a un entero, es decir, el valor numérico inicial es 7, y se descarta la parte no numérica (personas).<br>";
+    $a = "9E3";
+    echo "Ahora, la variable \$a recibe el valor de la cadena 9E3. En notación científica, esto representa el número 9000<br>";
+    $c = (double) $a;
+    echo "La cadena 9E3 se convierte a un número en punto flotante (double). En este caso, la conversión produce el valor numérico 9000.0<br>";
+
 
 ?>
 </body>
