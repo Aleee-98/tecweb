@@ -26,9 +26,30 @@
     echo "a = $a<br>";
     echo "b = $b<br>";
     echo "c = $c<br>";
-
+    echo "Después del segundo bloque de asignaciones, todas las variables ($a, $b, y $c) tendrán el valor PHP server, porque $b y $c están referenciadas a $a.";
+    
     echo "<br>";
-    echo "Después del segundo bloque de asignaciones, todas las variables ($a, $b, y $c) tendrán el valor PHP server, porque $b y $c están referenciadas a $a."
+    echo "<br>";
+    $a = "PHP5";
+    echo "Después de asignar \$a = 'PHP5'<br>";    
+
+    $z[] = &$a;
+    echo "Después de asignar \$z[] = \$a<br>";
+        
+    $b = "5a version de PHP";
+    echo "Después de asignar \$b = '5a version de PHP'<br>";
+
+    //$c = $b*10;
+    //echo "Después de asignar $c = $b * 10<br>";
+
+    $a .= $b;
+    echo "Después de concatenar \$a .= \$b<br>";
+
+    //$b *= $c;
+    //echo "Después de multiplicar $b *= $c<br>";
+
+    $z[0] = "MySQL";
+    echo "Después de asignar \$z[0] = 'MySQL'<br>";
 ?>
 </body>
 
