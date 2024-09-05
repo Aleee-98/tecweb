@@ -30,26 +30,48 @@
     
     echo "<br>";
     echo "<br>";
+
+
     $a = "PHP5";
-    echo "Después de asignar \$a = 'PHP5'<br>";    
+    echo "\$a = $a<br>";  // PHP5
 
     $z[] = &$a;
-    echo "Después de asignar \$z[] = \$a<br>";
-        
-    $b = "5a version de PHP";
-    echo "Después de asignar \$b = '5a version de PHP'<br>";
+    print_r($z);
 
-    //$c = $b*10;
-    //echo "Después de asignar $c = $b * 10<br>";
+    $b = "5a version de PHP";
+    echo "<br>\$b = $b<br>";  // 5a version de PHP
+
+    //$c = $b * 10;
+    //echo "\$c = $c<br>";  // 0
 
     $a .= $b;
-    echo "Después de concatenar \$a .= \$b<br>";
-
+    echo "\$a = $a<br>";  // PHP55a version de PHP
+    
     //$b *= $c;
-    //echo "Después de multiplicar $b *= $c<br>";
+    //echo "\$b = $b<br>";  // 0
 
     $z[0] = "MySQL";
-    echo "Después de asignar \$z[0] = 'MySQL'<br>";
+    echo "\$z[0] = $z[0]<br>";  // MySQL    
+    
+
+    echo "<br>";
+    function test() {
+        $a = "PHP5";
+        $z[] = &$a;
+        $b = "5a version de PHP";
+        $a .= $b;
+        $z[0] = "MySQL";
+        echo "Valores usando \$GLOBALS:<br>";
+        echo "a = " . $GLOBALS['a'] . "<br>";
+        echo "b = " . $GLOBALS['b'] . "<br>";
+        echo "c = " . $GLOBALS['c'] . "<br>";
+        echo "z = ";
+        print_r($GLOBALS['z']);
+        echo "<br><br>";
+    }
+
+    test();
+
 ?>
 </body>
 
