@@ -38,7 +38,8 @@
 
     <form>
     <p>Información del Participante</p>
-
+    <fieldset>
+    <legend>Información personal</legend>
     <ul>
     <li>Nombre:<input type="text" name="name"></li>
     <li>Dirección de E-mail:<input type="text" name="email"></li>
@@ -47,12 +48,12 @@
       <textarea name="story" rows="4" cols="60" maxlength="..."
       placeholder="No más de 300 caracteres de longitud"></textarea></li>
     </ul>
-
+    </fieldset>
     <h2>Diseña tus Mike personalizados:</h2>
+    <fieldset>
+    <legend>Diseño personalizado del Tenis</legend>
 
-    <p>Diseño personalizado del Tenis</p>
-
-    <p>Color <em>(escoge uno)</em>:</p>
+    <legend>Color <em>(escoge uno)</em>:</legend>
       <ul>
         <li><input type="radio" name="color" value="red">Rojo</li>
         <li><input type="radio" name="color" value="blue">Azul</li>
@@ -60,15 +61,16 @@
         <li><input type="radio" name="color" value="plateado">Plateado</li>
       </ul>
 
-    <p>Características <em>(escoge tantas como quieras)</em>:</p>
+    <legend>Características <em>(escoge tantas como quieras)</em>:</legend>
       <ul>
         <li><input type="checkbox" name="features[]" value="laces">Cordones brillantes</li>
         <li><input type="checkbox" name="features[]" value="logo">Logo metálico</li>
         <li><input type="checkbox" name="features[]" value="suela">Suela luminosa</li>
         <li><input type="checkbox" name="features[]" value="wifi">WiFi integrado</li>
       </ul>
-
-    <p>Talla</p>
+    </fieldset>
+    <fieldset>
+    <legend>Talla</legend>
     <p>Las medidas reflejan el estándar masculino:</p>
     <select id="talla" name="talla">
       <option value="3">3</option>
@@ -83,6 +85,7 @@
   </select><br>
     <p><input type="submit">
        <input type="reset"></p>
+    </fieldset>
   </form>
   </body>
 </html>
