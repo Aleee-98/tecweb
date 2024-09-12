@@ -1,9 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Práctica 7</title>
+<meta charset="utf-8" >
+    <title>Practica 7</title>
+    <style type="text/css">
+        ol, ul { 
+      list-style-type: none;
+        }
+    </style>
+    <style>
+    body{
+      background-color: #66bce9;
+      margin: 5%;
+      font-family: 'Times New Roman', Times, serif;     
+  }
+  h1{
+      text-align: center;
+      font-family: Helvetica;
+      font-weight: normal;
+      text-transform: uppercase;
+      color: #e8edef;
+      border-bottom: 1px solid #43bff0;
+      margin-top: 30px;
+  }
+  </style>        
 </head>
 <body>
 
