@@ -1,29 +1,106 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8" >
-    <title>Practica 7</title>
+    <meta charset="utf-8">
+    <title>Práctica 7</title>
     <style type="text/css">
         ol, ul { 
-      list-style-type: none;
+            list-style-type: none;
+        }
+        
+        body {
+            background-color: #66bce9;
+            margin: 5%;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: Helvetica;
+            font-weight: normal;
+            text-transform: uppercase;
+            color: #e8edef;
+            border-bottom: 1px solid #43bff0;
+            margin-top: 30px;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333333;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #43bff0;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3399cc;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #43bff0;
+            color: #ffffff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        h2, h3, h4 {
+            color: #333333;
+            margin-top: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        fieldset {
+            border: 2px solid #43bff0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #43bff0;
         }
     </style>
-    <style>
-    body{
-      background-color: #66bce9;
-      margin: 5%;
-      font-family: 'Times New Roman', Times, serif;     
-  }
-  h1{
-      text-align: center;
-      font-family: Helvetica;
-      font-weight: normal;
-      text-transform: uppercase;
-      color: #e8edef;
-      border-bottom: 1px solid #43bff0;
-      margin-top: 30px;
-  }
-  </style>        
 </head>
 <body>
 
