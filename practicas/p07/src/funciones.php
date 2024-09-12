@@ -55,34 +55,40 @@ function entero($numeroDado){
     
 
 
-function enterDo_while(){    
-    if (isset($_GET['numero'])) {
-        $numeroDado = intval($_GET['numero']); // Obtener el número dado vía GET
-
+function enterDo_while($numeroDado){        
         if ($numeroDado > 0) {
             $contador = 0;
             do {
                 $numeroAleatorio = rand(1, 100); // Generar un número aleatorio entre 1 y 100
-                $contador++;
-
-                echo "Número generado: $numeroAleatorio<br>";
-
+                $contador++;                
             } while ($numeroAleatorio % $numeroDado != 0);
 
-            echo "Número múltiplo de $numeroDado encontrado: $numeroAleatorio después de $contador intentos.<br>";
+            return "Número múltiplo de $numeroDado encontrado: $numeroAleatorio después de $contador intentos.<br>";
         } else {
-            echo "Por favor, proporciona un número mayor que 0.";
+            return "Por favor, proporciona un número mayor que 0.";
         }
-    } else {
-        echo "Por favor, proporciona el número dado a través de GET en la URL. Ejemplo: ?numero=5";
-    }
-}
+    } 
 
-function ascii(){
-    $arreglo = [];
-    for ($i = 97; $i <= 122; $i++) {
-        $arreglo[$i] = chr($i);
-    }
-}
 
+    function ascii() {
+        // Crear el arreglo con los valores ASCII de 'a' a 'z'
+        $arreglo = [];
+        for ($i = 97; $i <= 122; $i++) {
+            $arreglo[$i] = chr($i);
+        }
+    
+        // Crear la tabla en XHTML usando echo
+        echo '<table border="1">';
+        echo '<tr><th>ASCII</th><th>Caracter</th></tr>';
+    
+        // Recorrer el arreglo con foreach para crear las filas de la tabla
+        foreach ($arreglo as $key => $value) {
+            echo '<tr>';
+            echo '<td>' . $key . '</td>';   // Imprimir el valor ASCII
+            echo '<td>' . $value . '</td>'; // Imprimir el carácter correspondiente
+            echo '</tr>';
+        }
+    
+        echo '</table>';
+    }
 ?>

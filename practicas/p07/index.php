@@ -66,8 +66,36 @@
                     }    
                 ?>
 
+                <h3>Ciclo_DoWhile</h3>
+                <label for="numero4">Ingrese un número:</label>
+                <input type="text" name="numero4" id="numero4">
+                <button type="submit">Comprobar</button>
+
+                <?php
+                    include_once 'src/funciones.php';                
+
+                    if(isset($_GET['numero4']) && is_numeric($_GET['numero4'])){
+                        $num = $_GET['numero4'];
+                        // Llamar a la función Multiplo5_7 desde el archivo src/funciones.php
+                        $resultado4 = enterDo_while($num);
+                        echo '<h3>R= ' . $resultado4 . '</h3>';
+                    }
+                    else if (isset($_GET['numero4'])) {
+                        echo '<h3>Por favor, ingrese un número válido.</h3>';
+                    }    
+                ?>
         </fieldset>
 
+        <fieldset>
+            <legend>Tabla de ASCII</legend>
+
+            <?php
+                include_once 'src/funciones.php';
+                ascii();
+            ?>
+
+
+        </fieldset>
     </form>
 
 
