@@ -34,7 +34,7 @@ function generarSecuencia() {
 }
 
 function entero($numeroDado){    
-    if (is_int($numeroDado) && $numeroDado > 0) {  // Verificar que sea entero y mayor que 0
+    if (filter_var($numeroDado, FILTER_VALIDATE_INT) && $numeroDado > 0) {
         $encontrado = false;
         $contador = 0;
 
