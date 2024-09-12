@@ -1,7 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!-- saved from url=(0050)http://52.43.117.247/neo/classroom/tw/concurso.php -->
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<title>Registro Completado</title>
 		<style type="text/css">
 			body {margin: 20px; 
@@ -13,11 +14,11 @@
 			h2 {font-size: 1.2em;
 			color: #4A0048;}
 		</style>
-	<script src="chrome-extension://obbeehkplijogilkjkpkicnanojdckoi/js/button.js"></script></head>
+	</head>
 	<body>
 		<h1>MUCHAS GRACIAS</h1>
 
-		<p>Gracias por entrar al concurso de Tenis Mike® "Chidos mis Tenis". Hemos recibido la siguiente información de tu registro:</p>
+		<p>Gracias por entrar al concurso de Tenis Mike&#174; "Chidos mis Tenis". Hemos recibido la siguiente información de tu registro:</p>
 
 		<h2>Acerca de ti:</h2>
 		<ul>
@@ -33,7 +34,8 @@
 						<li><strong>Talla:</strong> <em></em></li>
 		</ul>
 		<p>
-		    <a href="http://validator.w3.org/check?uri=referer"><img src="./concurso_files/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88"></a>
+		    <a href="http://validator.w3.org/check?uri=referer"><img
+		      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
 		</p>
-	
-</body></html>
+	</body>
+</html>
