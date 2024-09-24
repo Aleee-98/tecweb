@@ -1,42 +1,44 @@
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="utf-8" >
-    <title>Registro de Productos</title>
-    <style type="text/css">
-      ol, ul { 
+<head>
+  <meta charset="utf-8">
+  <title>Registro de Productos</title>
+  <style type="text/css">
+    ol,
+    ul {
       list-style-type: none;
-      }
-    </style>
-  </head>
+    }
+  </style>
+</head>
 
-  <body>
-    <h1>Registro de Productos &ldquo;Buen Producto&rdquo;</h1>
+<body>
+  <h1>Registro de Productos &ldquo;Buen Producto&rdquo;</h1>
 
-    <p>Acontinuación, introduce un nuevo producto.</p>
+  <p>A continuación, introduce un nuevo producto.</p>
 
-    <form id="formularioProducto" action="http://localhost/tecweb/practicas/p09/set_producto_v2.php" method="post">
+  <form id="formularioProducto" action="http://localhost/tecweb/practicas/p09/set_producto_v2.php" method="post">
 
     <h2>Información de Producto</h2>
 
-      <fieldset>
-        <legend>Información</legend>
+    <fieldset>
+      <legend>Información</legend>
 
-        <ul>
-          <li><label for="form-name">Nombre:</label> <input type="text" name="name" id="form-name"></li>
-          <li><label for="form-marca">Marca:</label> <input type="marca" name="marca" id="form-marca"></li>
-          <li><label for="form-modelo">Modelo:</label> <input type="modelo" name="modelo" id="form-modelo"></li>
-          <li><label for="form-precio">Precio:</label> <input type="precio" name="precio" id="form-precio"></li>
-          <li><label for="form-unidades">Unidades:</label> <input type="unidades" name="unidades" id="form-unidades"></li>
-          <li><label for="form-detalles">Detalles:</label><br><textarea name="detalles" rows="4" cols="60" id="form-detalles" placeholder="No más de 300 caracteres de longitud"></textarea></li>       
-        </ul>
-      </fieldset>
-      <p>
-        <input type="submit" value="Agregar">
-        <input type="reset">
-      </p>
+      <ul>
+        <li><label for="form-name">Nombre:</label> <input type="text" name="name" id="form-name" required></li>
+        <li><label for="form-marca">Marca:</label> <input type="text" name="marca" id="form-marca" required></li>
+        <li><label for="form-modelo">Modelo:</label> <input type="text" name="modelo" id="form-modelo" required></li>
+        <li><label for="form-precio">Precio:</label> <input type="number" step="0.01" name="precio" id="form-precio" required></li>
+        <li><label for="form-unidades">Unidades:</label> <input type="number" name="unidades" id="form-unidades" required></li>
+        <li><label for="form-detalles">Detalles:</label><br><textarea name="detalles" rows="4" cols="60" id="form-detalles" placeholder="No más de 300 caracteres de longitud" required></textarea></li>
+      </ul>
+    </fieldset>
+    <p>
+      <input type="submit" value="Agregar">
+      <input type="reset" value="Restablecer">
+    </p>
 
-    </form>
-  </body>
+  </form>
+</body>
+
 </html>

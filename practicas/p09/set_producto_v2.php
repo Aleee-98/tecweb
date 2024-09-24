@@ -1,7 +1,7 @@
 <?php
-$nombre = 'Playera Peluche Caligari';
-$marca  = 'ADIDAS';
-$modelo = 'PELUCHE CALIGARI';
+$nombre = 'nombre_producto';
+$marca  = 'marca_producto';
+$modelo = 'modelo_producto';
 $precio = 1.0;
 $detalles = 'detalles_producto';
 $unidades = 1;
