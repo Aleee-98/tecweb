@@ -1,22 +1,22 @@
 <?php
-$nombre = 'nombre_producto';
-$marca  = 'marca_producto';
-$modelo = 'modelo_producto';
-$precio = 1.0;
-$detalles = 'detalles_producto';
-$unidades = 1;
-$imagen   = 'img/imagen.png';
+// Recibe los datos del formulario
+$nombre = $_POST['name'];
+$marca = $_POST['marca'];
+$modelo = $_POST['modelo'];
+$precio = $_POST['precio'];
+$detalles = $_POST['detalles'];
+$unidades = $_POST['unidades'];
+$imagen = 'img/default.png'; // Puedes manejar la carga de imágenes de otra forma si es necesario
 
 /** SE CREA EL OBJETO DE CONEXION */
 @$link = new mysqli('localhost', 'root', 'Calcetines2', 'marketzone');	
 
 /** comprobar la conexión */
-if ($link->connect_errno) 
-{
+if ($link->connect_errno) {
     die('Falló la conexión: '.$link->connect_error.'<br/>');
 }
 
-/** Verificar si el producto ya existe en la base de datos usando comparaciones insensibles a mayúsculas y eliminando espacios */
+/** Verificar si el producto ya existe en la base de datos */
 $check_sql = "SELECT * FROM productos 
               WHERE LOWER(TRIM(nombre)) = LOWER(TRIM('{$nombre}')) 
               AND LOWER(TRIM(marca)) = LOWER(TRIM('{$marca}')) 
@@ -43,7 +43,7 @@ if ($result->num_rows > 0) {
         echo 'Detalles: ' . $detalles . '<br/>';
         echo 'Unidades: ' . $unidades . '<br/>';
         echo 'Imagen: ' . $imagen . '<br/>';
-        echo 'Eliminado: 0<br/>';  // Siempre será 0 en el momento de inserción
+        echo 'Eliminado: 0<br/>';
     } else {
         echo 'El Producto no pudo ser insertado =(';
     }
