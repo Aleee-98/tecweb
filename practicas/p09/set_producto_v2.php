@@ -6,7 +6,7 @@ $modelo = $_POST['modelo'];
 $precio = $_POST['precio'];
 $detalles = $_POST['detalles'];
 $unidades = $_POST['unidades'];
-$imagen = 'img/default.png'; // Puedes manejar la carga de imágenes de otra forma si es necesario
+$imagen = 'img/imagen.png'; // Puedes manejar la carga de imágenes de otra forma si es necesario
 
 /** SE CREA EL OBJETO DE CONEXION */
 @$link = new mysqli('localhost', 'root', 'Calcetines2', 'marketzone');	
