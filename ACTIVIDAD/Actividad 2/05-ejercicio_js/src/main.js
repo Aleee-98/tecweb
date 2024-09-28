@@ -189,3 +189,81 @@ function unoDiez(){
         div.innerHTML += f+' ';
     }
 }
+
+function mensajeDoc() {
+    // Localizar el div con id "holaDiv"
+    var div = document.getElementById('mDoc');
+    // Modificar su contenido para mostrar "Hola Mundo"
+    div.innerHTML += '<h3>Cuidado <br>Ingresa tu documento correctamente</h3>';
+    div.innerHTML += '<h3>Cuidado <br>Ingresa tu documento correctamente</h3>';
+    div.innerHTML += '<h3>Cuidado <br>Ingresa tu documento correctamente</h3>';
+}
+
+function mensajeDoc2() {
+    // Localizar el div con id "holaDiv"
+    var div = document.getElementById('mDoc2');
+    // Modificar su contenido para mostrar "Hola Mundo"
+    div.innerHTML += '<h3>Cuidado <br>Ingresa tu documento correctamente</h3>';    
+}
+
+function mostrarRango() {
+    var valor1, valor2;
+    valor1 = prompt('Ingresa el valor inferior:', '');
+    valor1 = parseInt(valor1);
+    valor2 = prompt('Ingresa el valor superior:', '');
+    valor2 = parseInt(valor2);
+
+    var div = document.getElementById('rango');
+    div.innerHTML = '';  // Limpiar el contenido previo
+        
+    for (var inicio = valor1; inicio <= valor2; inicio++) {
+        div.innerHTML += '<h3>' + inicio + '</h3>';    
+    }
+}
+  
+function convertirCastellano() {
+    var valor = prompt('Ingresa un valor entre 1 y 5', '');
+    var x = parseInt(valor);  // Declarar x con var
+    var div = document.getElementById('castellano');
+
+    if (x === 1) {
+        div.innerHTML = '<h3>uno</h3>';
+    } else if (x === 2) {
+        div.innerHTML = '<h3>dos</h3>';
+    } else if (x === 3) {
+        div.innerHTML = '<h3>tres</h3>';
+    } else if (x === 4) {
+        div.innerHTML = '<h3>cuatro</h3>';
+    } else if (x === 5) {
+        div.innerHTML = '<h3>cinco</h3>';
+    } else {
+        div.innerHTML = '<h3>Valor incorrecto</h3>';
+    }
+}
+
+function convertirCastellano2() {
+    var valor = prompt('Ingresa un valor entre 1 y 5', '');
+    var x = parseInt(valor);  // Declarar x con var
+    var div = document.getElementById('castellano2');
+
+    switch (x) {
+        case 1: 
+            div.innerHTML = '<h3>uno</h3>';
+            break;
+        case 2: 
+            div.innerHTML = '<h3>dos</h3>';
+            break;
+        case 3: 
+            div.innerHTML = '<h3>tres</h3>';
+            break;
+        case 4: 
+            div.innerHTML = '<h3>cuatro</h3>';
+            break;
+        case 5: 
+            div.innerHTML = '<h3>cinco</h3>';
+            break;
+        default: 
+            div.innerHTML = '<h3>Valor incorrecto</h3>';
+            break;
+    }
+}
