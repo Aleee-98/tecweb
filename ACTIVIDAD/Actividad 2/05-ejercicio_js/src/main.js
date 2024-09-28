@@ -135,3 +135,57 @@ function color() {
             break;
     }
 }
+
+function unoCien() {
+    var x = 1;
+    var div = document.getElementById('unoCien');
+    div.innerHTML = '';  // Limpiar el contenido previo
+
+    while (x <= 100) {
+        div.innerHTML += '<h3>' + x + '</h3>';  // Concatenar el número actual
+        x = x + 1;
+    }
+}
+
+function suma(){
+    var x=1;
+    var suma=0;
+    var valor;
+    while (x<=5){
+        valor = prompt('Ingresa el valor:', '');
+        valor = parseInt(valor);
+        suma = suma+valor;
+        x = x+1;
+    }
+    var div = document.getElementById('suma');
+    div.innerHTML += '<h3>La suma de los valores es: ' + suma + '</h3>';  // Concatenar el número actual
+}
+
+function digitos(){
+    var valor;
+    var div = document.getElementById('digitos');
+    do{
+        valor = prompt('Ingresa un valor entre 0 y 999:', '');
+        valor = parseInt(valor);
+        div.innerHTML += 'El valor '+valor+' tiene ';
+        if (valor<10)
+        div.innerHTML += 'Tiene 1 dígitos <br>';
+        else
+        if (valor<100) {
+        div.innerHTML += 'Tiene 2 dígitos <br>';
+        }
+        else {
+        div.innerHTML += 'Tiene 3 dígitos <br>';
+        }        
+    }while(valor!=0);
+}
+
+function unoDiez(){
+    var f;
+    var div = document.getElementById('unoDiez');
+    div.innerHTML = '';  // Limpiar el contenido previo
+
+    for(f=1; f<=10; f++){
+        div.innerHTML += f+' ';
+    }
+}
