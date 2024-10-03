@@ -5,82 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript</title>
     <script src="./src/main.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        div {
+            margin-bottom: 15px;
+        }
+        input[type="button"] {
+            padding: 10px 15px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <h1>Hola Mundo de JavaScript</h1>
+
     <div id="nombre"></div>
     <div id="edad"></div>
-    <input id="clickMe" type="button" value="clickme" onclick="getDatos();" />
-    
-    <!-- Botón para llamar a la función holaMundo -->
-    <input id="holaBtn" type="button" value="Mostrar Hola Mundo" onclick="holaMundo();" />
-    <!-- div donde se mostrará "Hola Mundo" -->
-    <div id="holaDiv"></div>
+    <input id="clickMe" type="button" value="Click me" onclick="getDatos();" />
 
-    <!-- Botón para llamar a getVariables -->
-    <input id="variablesBtn" type="button" value="Ingresar Variables" onclick="getVariables();" />
-    <!-- div donde se mostrarán las variables -->
-    <div id="variablesDiv"></div>
+    <div>
+        <input id="holaBtn" type="button" value="Mostrar Hola Mundo" onclick="holaMundo();" />
+        <div id="holaDiv"></div>
 
-    <!-- Botón para llamar a getVariables -->
-    <input id="mensajeBtn" type="button" value="Mensaje" onclick="mensaje();" />
-    <!-- div donde se mostrarán las variables -->
-    <div id="mensajeDiv"></div>
+        <input id="variablesBtn" type="button" value="Ingresar Variables" onclick="getVariables();" />
+        <div id="variablesDiv"></div>
 
-    <!-- Botón para llamar a getVariables -->
-    <input id="sumaProductoBtn" type="button" value="SumaYProducto" onclick="sumaProducto();" />
-    <!-- div donde se mostrarán las variables -->
-    <div id="sumaProducto"></div>
+        <input id="mensajeBtn" type="button" value="Mensaje" onclick="mensaje();" />
+        <div id="mensajeDiv"></div>
 
-    <!-- Botón para llamar a getVariables -->
-    <input id="notaBtn" type="button" value="calificacion" onclick="calificacion();" />
-    <!-- div donde se mostrarán las variables -->
-    <div id="nota"></div>
+        <input id="sumaProductoBtn" type="button" value="Suma y Producto" onclick="sumaProducto();" />
+        <div id="sumaProducto"></div>
 
-    <!-- Botón para llamar a getVariables -->
-    <input id="mayorBtn" type="button" value="Comparacion" onclick="mayor();" />
-    <!-- div donde se mostrarán las variables -->
-    <div id="mayor"></div>
+        <input id="notaBtn" type="button" value="Calificación" onclick="calificacion();" />
+        <div id="nota"></div>
 
-    <!-- Botón para llamar a getVariables -->
-    <input id="notasBtn" type="button" value="Notas" onclick="calificaciones();" />
-    <!-- div donde se mostrarán las variables -->
-    <div id="calificaciones"></div>
+        <input id="mayorBtn" type="button" value="Comparación" onclick="mayor();" />
+        <div id="mayor"></div>
 
-    <!-- Botón para llamar a getVariables -->
-    <input id="numeroLetraBtn" type="button" value="Numero a Letras" onclick="numeroLetras();" />
-    <!-- div donde se mostrarán las variables -->
-    <div id="numeroLetra"></div>
+        <input id="notasBtn" type="button" value="Notas" onclick="calificaciones();" />
+        <div id="calificaciones"></div>
 
-    <input id="colorBtn" type="button" value="Cambiar Color" onclick="color();" />
-    <div id="mensajeDiv"></div>
+        <input id="numeroLetraBtn" type="button" value="Número a Letras" onclick="numeroLetras();" />
+        <div id="numeroLetra"></div>
 
-    <input id="unoCienBtn" type="button" value="Contar uno a cien" onclick="unoCien();" />
-    <div id="unoCien"></div>
+        <input id="colorBtn" type="button" value="Cambiar Color" onclick="color();" />
+        <div id="colorDiv"></div>
 
-    <input id="sumaBtn" type="button" value="Suma de cinco números" onclick="suma();" />
-    <div id="suma"></div>
+        <input id="unoCienBtn" type="button" value="Contar uno a cien" onclick="unoCien();" />
+        <div id="unoCien"></div>
 
-    <input id="digitosBtn" type="button" value="Digitos" onclick="digitos();" />
-    <div id="digitos"></div>
+        <input id="sumaBtn" type="button" value="Suma de cinco números" onclick="suma();" />
+        <div id="suma"></div>
 
-    <input id="unoDiezBtn" type="button" value="Imprimir del 1 a 10" onclick="unoDiez();" />
-    <div id="unoDiez"></div>
+        <input id="digitosBtn" type="button" value="Dígitos" onclick="digitos();" />
+        <div id="digitos"></div>
 
-    <input id="mensajeDocBtn" type="button" value="Mostrar Mensaje" onclick="mensajeDoc();" />
-    <div id="mDoc"></div>
+        <input id="unoDiezBtn" type="button" value="Imprimir del 1 a 10" onclick="unoDiez();" />
+        <div id="unoDiez"></div>
 
-    <input id="mensajeDoc2Btn" type="button" value="Mostrar Mensaje 2" onclick="mensajeDoc2();" />
-    <div id="mDoc2"></div>
-    
-    <input id="rangoBtn" type="button" value="Mostrar Rango" onclick="mostrarRango();" />
-    <div id="rango"></div>
+        <input id="mensajeDocBtn" type="button" value="Mostrar Mensaje" onclick="mensajeDoc();" />
+        <div id="mDoc"></div>
 
-    <input id="convertirBtn" type="button" value="Convertir a Castellano" onclick="convertirCastellano();" />
-    <div id="castellano"></div>
+        <input id="mensajeDoc2Btn" type="button" value="Mostrar Mensaje 2" onclick="mensajeDoc2();" />
+        <div id="mDoc2"></div>
 
-    <input id="convertir2Btn" type="button" value="Convertir a Castellano 2" onclick="convertirCastellano2();" />
-    <div id="castellano2"></div>
+        <input id="rangoBtn" type="button" value="Mostrar Rango" onclick="mostrarRango();" />
+        <div id="rango"></div>
 
+        <input id="convertirBtn" type="button" value="Convertir a Castellano" onclick="convertirCastellano();" />
+        <div id="castellano"></div>
+
+        <input id="convertir2Btn" type="button" value="Convertir a Castellano 2" onclick="convertirCastellano2();" />
+        <div id="castellano2"></div>
+    </div>
 </body>
 </html>
