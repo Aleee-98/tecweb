@@ -51,6 +51,7 @@
                     <th scope="col">Unidades</th>
                     <th scope="col">Detalles</th>
                     <th scope="col">Imagen</th>
+                    <th scope="col">Modificar</th> <!-- Nueva columna -->
                 </tr>
             </thead>
             <tbody>
@@ -64,6 +65,9 @@
                     <td><?= htmlspecialchars($producto['unidades']) ?></td>
                     <td><?= htmlspecialchars(utf8_encode($producto['detalles'])) ?></td>
                     <td><img src="<?= htmlspecialchars($producto['imagen']) ?>" alt="Imagen de <?= htmlspecialchars($producto['nombre']) ?>" style="max-width: 100px;"></td>
+                    <td>
+                        <a href="formulario_productos_v2.php?id=<?= htmlspecialchars($producto['id']) ?>" class="btn btn-warning">Modificar</a> <!-- Botón para modificar -->
+                    </td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
