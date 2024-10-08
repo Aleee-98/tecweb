@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
 <head>
   <meta charset="utf-8">
@@ -25,14 +25,14 @@
 ?>
   <h1>Registro de Productos &ldquo;Buen Producto&rdquo;</h1>
   <p>Modifica el producto.</p>
-  <form id="formularioProducto" action="http://localhost/tecweb/practicas/p10/set_producto_v2.php" method="post">
+  <form id="formularioProducto" action="update_producto.php" method="post"> <!-- Acción modificada -->
     <input type="hidden" name="id" value="<?= htmlspecialchars($id) ?>"> <!-- ID del producto -->
     <h2>Información de Producto</h2>
     <fieldset>
       <legend>Información</legend>
       <ul>
         <li><label for="form-name">Nombre:</label>
-          <input type="text" name="name" id="form-name" maxlength="100" value="<?= htmlspecialchars($producto['nombre']) ?>" required>
+          <input type="text" name="nombre" id="form-name" maxlength="100" value="<?= htmlspecialchars($producto['nombre']) ?>" required>
         </li>
         <li><label for="form-marca">Marca:</label>
           <select name="marca" id="form-marca" required>
