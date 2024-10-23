@@ -43,10 +43,10 @@
           </select>
         </li>
 
-        <!-- Modelo: Requerido, alfanumérico, máximo 25 caracteres -->
+        <!-- Modelo: Requerido, alfanumérico, máximo 25 caracteres, incluyendo espacios y guiones -->
         <li>
           <label for="form-modelo">Modelo:</label>
-          <input type="text" name="modelo" id="form-modelo" pattern="[A-Za-z0-9]+" maxlength="25" required>
+          <input type="text" name="modelo" id="form-modelo" pattern="[A-Za-z0-9\- ]+" maxlength="25" required>
         </li>
 
         <!-- Precio: Requerido, mayor a 99.99 -->

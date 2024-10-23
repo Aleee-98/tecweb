@@ -42,9 +42,10 @@
             <option value="Puma" <?= $producto['marca']=='Puma'?'selected':'' ?>>Puma</option>
             <option value="Pirma" <?= $producto['marca']=='Pirma'?'selected':'' ?>>Pirma</option>
           </select>
-        </li>
-        <li><label for="form-modelo">Modelo:</label>
-          <input type="text" name="modelo" id="form-modelo" pattern="[A-Za-z0-9]+" maxlength="25" value="<?= htmlspecialchars($producto['modelo']) ?>" required>
+        </li>        
+        <li>
+          <label for="form-modelo">Modelo:</label>
+          <input type="text" name="modelo" id="form-modelo" pattern="[A-Za-z0-9\- ]+" maxlength="25" required>
         </li>
         <li><label for="form-precio">Precio:</label>
           <input type="number" name="precio" id="form-precio" step="0.01" min="100" value="<?= htmlspecialchars($producto['precio']) ?>" required>

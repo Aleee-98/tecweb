@@ -92,10 +92,10 @@ function agregarProducto(e) {
         alert("La marca es requerida.");
         return;
     }
-    if (!modelo || modelo.length > 25 || !/^[a-zA-Z0-9]+$/.test(modelo)) {
-        alert("El modelo es requerido, debe ser alfanumérico y tener 25 caracteres o menos.");
+    if (!modelo || modelo.length > 25 || !/^[a-zA-Z0-9\s-]+$/.test(modelo)) {
+        alert("El modelo es requerido, debe ser alfanumérico, permitir espacios y guiones, y tener 25 caracteres o menos.");
         return;
-    }
+    }        
     if (!precio || precio <= 99.99) {
         alert("El precio es requerido y debe ser mayor a 99.99.");
         return;
