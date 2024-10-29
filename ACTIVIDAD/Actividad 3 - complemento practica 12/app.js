@@ -125,12 +125,12 @@ $(document).ready(function() {
     });
   
     // Editar producto
-    $(document).on('click', '.product-item', function(e) {
-      const element = $(this)[0].activeElement.parentElement.parentElement;
-      const id = $(element).attr('productId');
-      $.post('./backend/product-single.php', { id }, response => {
-        let product = JSON.parse(response);
-        $('#name').val(product.nombre);
+    $(document).on("click", ".product-item", function () {
+      let element = $(this)[0].parentElement.parentElement;
+      let id = $(element).attr("productId");
+      $.post("backend/product-single.php", { id }, function (response) {
+        const product = JSON.parse(response);
+        $("#name").val(product.nombre);
         $('#productId').val(product.id);
         $('#price').val(product.precio);
         $('#units').val(product.unidades);
@@ -138,9 +138,39 @@ $(document).ready(function() {
         $('#brand').val(product.marca);
         $('#details').val(product.detalles);
         edit = true;
-      });
-      e.preventDefault();
+
     });
+  });
+
+  // Cuando se envía el formulario de edición
+$('#product-form').on('submit', function(e) {
+  e.preventDefault(); // Prevenir que se recargue la página
+
+  let idProducto = $('#product-id').val();
+  let name = $('#name').val();
+  let description = $('#description').val();
+  
+  let producto = JSON.parse(description);
+  producto.nombre = name;
+  producto.id = idProducto;
+
+  $.ajax({
+      url: 'backend/product-edit.php',
+      type: 'POST',
+      data: JSON.stringify(producto),
+      success: function(response) {
+          let data = JSON.parse(response);
+          if (data.status === 'success') {
+              alert(data.message); // Mostrar mensaje de éxito
+          } else {
+              alert('Error al actualizar el producto');
+          }
+
+          listarProductos(); // Actualizar la lista de productos
+      }
+  });
+});
+
   
     // Búsqueda en tiempo real
     $('#search').keyup(function() {
