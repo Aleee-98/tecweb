@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cinefanatico SYSTEM "cinefanatico.dtd">
+<cinefanatico>
+   <tarjeta noserie="01" visitas="24" puntos="120">
+       <nombre>Aleee98</nombre>
+       <correo>ale98@correo.com</correo>
+       <telefono tipo="casa">1234567890</telefono>
+       <telefono tipo="movil">9876543210</telefono>
+   </tarjeta> 
+</cinefanatico>

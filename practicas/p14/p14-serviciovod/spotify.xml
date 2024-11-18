@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Spotify version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+    xs:noNamespaceSchemaLocation="spotify.xsd">
+    <Cuenta id="0" plan="premium" fechaIni="2024-11-16" fechaFin="2025-11-16">
+        <Nombre>Ale G</Nombre>
+        <Correo>ale98@gmail.com</Correo>
+        <Telefono tipo="movil">1234567890</Telefono>
+    </Cuenta>
+</Spotify>

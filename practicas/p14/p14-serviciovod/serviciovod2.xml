@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE CatalogoVOD SYSTEM "serviciovod.dtd">
+<CatalogoVOD>
+    <cuenta correo="ale98@correo.com">
+        <perfiles>
+            <perfil usuario="Aleee98" idioma="es"></perfil>
+            <perfil usuario="LeoMessi" idioma="es"></perfil>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas>
+            <genero nombre="Accion">
+                <titulo duracion="02:32:10">
+                    <nombre>Batman The Dark Knight</nombre>
+                </titulo>
+                <titulo duracion="01:47:58">
+                    <nombre>Depredador</nombre>
+                </titulo>
+                <titulo duracion="02:01:58">
+                    <nombre>Constantine</nombre>
+                </titulo>
+                <titulo duracion="02:33:41">
+                    <nombre>Terminator 2</nombre>
+                </titulo>
+            </genero>
+            <genero nombre="Comedia">
+                <titulo duracion="01:49:21">
+                    <nombre>¿Y dónde están las rubias?</nombre>
+                </titulo>
+                <titulo duracion="01:29:13">
+                    <nombre>Shrek</nombre>
+                </titulo>
+                <titulo duracion="01:26:59">
+                    <nombre>¿Y dónde está el fantasma?</nombre>
+                </titulo>
+                <titulo duracion="01:38:02">
+                    <nombre>Una pareja explosiva</nombre>
+                </titulo>
+            </genero>
+        </peliculas>
+        <programas>
+            <genero nombre="Comedia">
+                <titulo duracion="00:21:53">
+                    <nombre>Rick and Morty</nombre>
+                </titulo>
+                <titulo duracion="00:19:51">
+                    <nombre>The big bang theroy</nombre>
+                </titulo>
+                <titulo duracion="00:46:15">
+                    <nombre>Peacemaker</nombre>
+                </titulo>
+                <titulo duracion="00:30:00">
+                    <nombre>Todo el mundo odia a Chris</nombre>
+                </titulo>
+            </genero>
+            <genero nombre="Ciencia Ficción">
+                <titulo duracion="00:59:32">
+                    <nombre>Dark</nombre>
+                </titulo>
+                <titulo duracion="00:52:45">
+                    <nombre>Watchmen</nombre>
+                </titulo>
+                <titulo duracion="00:59:12">
+                    <nombre>Fallout</nombre>
+                </titulo>
+                <titulo duracion="00:59:53">
+                    <nombre>Constelación</nombre>
+                </titulo>
+            </genero>
+        </programas>
+    </contenido>
+</CatalogoVOD>
