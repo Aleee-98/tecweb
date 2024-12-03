@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>ODS 8 - Chambeando y descubriendo</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        h3 {
+            color: #333;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: #555;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* Contenedor del formulario */
+        #formularioArea,
+        #formularioEvaluacion {
+            background: #fff;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 1rem auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+
+        /* Estilos para preguntas */
+        .question {
+            margin-bottom: 1.5rem;
+        }
+
+        .question .h5 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+  
+        #options input[type="radio"] {
+            margin-right: 0.5rem;
+        }
+
+        /* Estilos para etiquetas con opciones */
+        label.options {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            color: #333;
+            cursor: pointer;
+        }
+
+        label.options input[type="radio"] {
+            margin-right: 0.5rem;
+        }
+
+        label.options:hover {
+            color: #007bff;
+        }
+
+        label.options .checkmark {
+            display: flex;
+        }
+
+        /* Botones */
+        button {
+            align-self: center;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            display: block;
+            margin: 2rem auto;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            #options {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            #options input[type="radio"] {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        .btn-success2 {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-success2:hover {
+            background-color: #218838;
+        }
+        .linear-scale {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .linear-scale label {
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .linear-scale input[type="radio"] {
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        .linear-scale label:hover {
+            color: #007bff;
+        }
+
+        .linear-scale input[type="radio"]:checked + label {
+            font-weight: bold;
+            color: #28a745;
+        }
+
+
+    </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+            <div class="container px-5">
+                <a class="navbar-brand" href="#page-top">Chambeando y descubriendo</a>  
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#formularioArea">Formulario</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./login/login.php">Iniciar sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="masthead text-center text-white">
+            <div class="masthead-content">
+                <div class="container px-5">
+                    <h1 class="masthead-heading mb-0">Objetivos de Desarrollo Sostenible</h1>
+                    <h2 class="masthead-subheading mb-0">Trabajo decente y crecimiento económico</h2>
+                    <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#scroll">Conocer más</a>
+                </div>
+            </div>
+            <div class="bg-circle-1 bg-circle"></div>
+            <div class="bg-circle-2 bg-circle"></div>
+            <div class="bg-circle-3 bg-circle"></div>
+            <div class="bg-circle-4 bg-circle"></div>
+        </header>
+        <!-- Content section 1-->
+        <section id="scroll">
+            <div class="container px-3">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/01.png" alt="..." /></div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="p-5">
+                            <h2 class="display-4">¿Qué es?</h2>
+                            <p>Se trata de un objetivo promovido por la ONU que busca el crecimiento económico inclusivo y sostenible, además de un empleo y trabajo decente para todos.<br>
+                            La pandemia dejó una lenta recuperación para la economía, viéndose reflejado en trabajos con condiciones precarias, sin acceso a prestaciones sociales. Los jóvenes presentan dificultades en la búsqueda de trabajo digno, agravando las brechas económicas y sociales.<br>
+                            
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Content section 2-->
+        <section>
+            <div class="container px-3">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/02.png" alt="..." /></div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="p-5">
+                            <h2 class="display-4">Nuestro contexto</h2>
+                            <p>
+                                La adopción de soluciones digitales ha crecido rápidamente en el país, lo que ofrece una oportunidad para desarrollar 
+                                proyectos que mejoren el acceso a la educación, capacitación laboral y financiamiento digital. Por lo que se precisa de un proyecto que proporcione una herramienta de apoyo para la búsqueda de trabajos selectivos para las actitudes y aptitudes de cada individuo. 
+                                Adicionalmente, que impulse estas capacidades y desarrolle nuevas, logrado a través de cursos y certificaciones.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Content forms-->
+        <form id="form">
+            <div id="formularioArea">
+                <div class="container px-3">
+                    <div class="formulario-control">
+                        <div class="row gx-5 align-items-center">
+                            <div class="col-lg-11">
+                                <div class="p-5">
+                                    <h3 class="display-3">Conoce tu área</h3>
+                                    <p>Instrucciones. Contesta las siguientes preguntas según el valor de la escala que más te represente. 1 es muy en desacuerdo, considera 3 neutro, y 5 muy de acuerdo. Evita contestar con 3.</p>
+                                </div>
+                                <div class="p-5">
+                                    <div class="question">
+                                        <div class="h5"><b>Me considero una persona con habilidades artísticas.</b></div>
+                                        <div class="linear-scale" id="options">
+                                            <label>
+                                                <input type="radio" name="form1-p1" value="1"> 1
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p1" value="2"> 2
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p1" value="3"> 3
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p1" value="4"> 4
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p1" value="5"> 5
+                                            </label>
+                                        </div>
+                                    </div>                                    
+                                    <div class="question">
+                                        <div class="h5"><b>Soy bueno analizando comportamientos a mi alrededor.</b></div>
+                                        <div class="linear-scale" id="options">
+                                            <label>
+                                                <input type="radio" name="form1-p2" value="1"> 1
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p2" value="2"> 2
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p2" value="3"> 3
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p2" value="4"> 4
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p2" value="5"> 5
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <div class="h5"><b>Me gusta intentar predecir eventos futuros en base a experiencias pasadas.</b></div>
+                                        <div class="linear-scale" id="options">
+                                            <label>
+                                                <input type="radio" name="form1-p3" value="1"> 1
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p3" value="2"> 2
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p3" value="3"> 3
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p3" value="4"> 4
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p3" value="5"> 5
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <div class="h5"><b>Prefiero pasar más tiempo trabajando frente a una computadora que con otros dispositivos físicos.</b></div>
+                                        <div class="linear-scale" id="options">
+                                            <label>
+                                                <input type="radio" name="form1-p4" value="1"> 1
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p4" value="2"> 2
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p4" value="3"> 3
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p4" value="4"> 4
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p4" value="5"> 5
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <div class="h5"><b>Me gusta estructurar y administrar mi entorno y trabajo.</b></div>
+                                        <div class="linear-scale" id="options">
+                                            <label>
+                                                <input type="radio" name="form1-p5" value="1"> 1
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p5" value="2"> 2
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p5" value="3"> 3
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p5" value="4"> 4
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p5" value="5"> 5
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <div class="h5"><b>Tengo habilidad para las manualidades y trabajos finos.</b></div>
+                                        <div class="linear-scale" id="options">
+                                            <label>
+                                                <input type="radio" name="form1-p6" value="1"> 1
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p6" value="2"> 2
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p6" value="3"> 3
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p6" value="4"> 4
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p6" value="5"> 5
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <div class="h5"><b>Me considero bueno con los números y resolviendo problemas matemáticos.</b></div>
+                                        <div class="linear-scale" id="options">
+                                            <label>
+                                                <input type="radio" name="form1-p7" value="1"> 1
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p7" value="2"> 2
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p7" value="3"> 3
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p7" value="4"> 4
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p7" value="5"> 5
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <div class="h5"><b>Disfruto de automatizar las tareas y aprovechar mi tiempo al máximo.</b></div>
+                                        <div class="linear-scale" id="options">
+                                            <label>
+                                                <input type="radio" name="form1-p8" value="1"> 1
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p8" value="2"> 2
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p8" value="3"> 3
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p8" value="4"> 4
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p8" value="5"> 5
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <div class="h5"><b>Me interesa conocer sobre el funcionamiento de los sitios web que visito cotidianamente.</b></div>
+                                        <div class="linear-scale" id="options">
+                                            <label>
+                                                <input type="radio" name="form1-p9" value="1"> 1
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p9" value="2"> 2
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p9" value="3"> 3
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p9" value="4"> 4
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p9" value="5"> 5
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <div class="h5"><b>Me interesa conocer cómo funcionan los dispositivos electrónicos a mi alrededor.</b></div>
+                                        <div class="linear-scale" id="options">
+                                            <label>
+                                                <input type="radio" name="form1-p10" value="1"> 1
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p10" value="2"> 2
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p10" value="3"> 3
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p10" value="4"> 4
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p10" value="5"> 5
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <div class="h5"><b>Me gusta poner mi toque personal a mis proyectos.</b></div>
+                                        <div class="linear-scale" id="options">
+                                            <label>
+                                                <input type="radio" name="form1-p11" value="1"> 1
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p11" value="2"> 2
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p11" value="3"> 3
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p11" value="4"> 4
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="form1-p11" value="5"> 5
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="formularioEvaluacion">
+                <div class="container px-3">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-11">
+                            <div class="p-5">
+                                <h3 class="display-3">Evaluación de situación</h3>
+                                <p>Contesta el siguiente formulario donde se evaluarán las respuestas para la problemática expuesta anteriormente.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="container px-3 align-items-center">
+                    <div class="question ml-sm-5 pl-sm-5 pt-2 align-items-center">
+                        <div class="py-2 h5"><b>En tu último o actual trabajo ¿Cuál fue tu salario mensual?</b></div>
+                        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
+                            <label class="options">Menos de $8000
+                                <input class="form-check-input" type="radio" name="form2-p1">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="options">De $8000 a $16000
+                                <input type="radio" name="form2-p1">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="options">De $16000 a $24000
+                                <input type="radio" name="form2-p1">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="options">Más de $24000
+                                <input type="radio" name="form2-p1">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="question ml-sm-5 pl-sm-5 pt-2 align-items-center">
+                        <div class="py-2 h5"><b>¿Recibes las prestaciones de ley?</b></div>
+                        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
+                            <label class="options">Sí
+                                <input type="radio" name="form2-p2">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="options">No
+                                <input type="radio" name="form2-p2">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="question ml-sm-5 pl-sm-5 pt-2 align-items-center">
+                        <div class="py-2 h5"><b>¿Recibes las prestaciones de ley?</b></div>
+                        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
+                            <label class="options">Sí
+                                <input type="radio" name="form2-p3">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="options">No
+                                <input type="radio" name="form2-p3">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="question ml-sm-5 pl-sm-5 pt-2 align-items-center">
+                        <div class="py-2 h5"><b>¿Cuánto tiempo al día consumes en traslados a tu área de trabajo?</b></div>
+                        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
+                            <label class="options">Menos de 30 minutos
+                                <input type="radio" name="form2-p4">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="options">Entre 30 y 60 minutos
+                                <input type="radio" name="form2-p4">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="options">Más de 60 minutos
+                                <input type="radio" name="form2-p4">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="question ml-sm-5 pl-sm-5 pt-2 align-items-center">
+                        <div class="py-2 h5"><b>¿Recibes seguro médico por parte de tu empleador?</b></div>
+                        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
+                            <label class="options">Sí
+                                <input type="radio" name="form2-p5">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="options">No
+                                <input type="radio" name="form2-p5">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="question ml-sm-5 pl-sm-5 pt-2 align-items-center">
+                        <div class="py-2 h5"><b>¿Estás satisfecho con tu trabajo actual/anterior?</b></div>
+                        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
+                            <label class="options">Sí
+                                <input type="radio" name="form2-p6">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="options">No
+                                <input type="radio" name="form2-p6">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <button class="btn btn-success2" type="submit">Enviar</button>
+                    </div>
+                </div>
+            </div>            
+        </form>
+        <!--Generar gráfica de barras-->
+        <h1>Resultados por Área</h1>
+        <canvas id="areaChart" width="400" height="200"></canvas>
+        <script src="app.js"></script>
+
+        <!-- Footer-->
+        <footer class="py-5 bg-black">
+            <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Your Website 2023</p></div>
+        </footer>
+        <!-- Core JS-->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+        <!-- Core theme JS-->
+        <script src="app.js"></script>
+    </body>
+</html>
